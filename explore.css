@@ -1,0 +1,148 @@
+body{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    font-family: "Playfair Display", serif;
+}
+
+.explore-slideshow {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.slides img.active {
+  display: block;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slide-btn.prev { left: 20px; }
+.slide-btn.next { right: 20px; }
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.slide.active {
+  display: block;
+}
+
+.explore-content {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+}
+
+.explore-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.info-card {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.info-card h3 {
+  margin-top: 0;
+}
+
+.attractions {
+  padding: 60px 40px;
+  background: #fafafa;
+}
+
+.attractions h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.attractions h2 span {
+  font-weight: bold;
+}
+
+.attractions-slider {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.attr-card {
+  width: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.attr-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.attr-card h3 {
+  margin: 10px;
+}
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer a {
+  color: #ffdd55;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.read-btn {
+  margin: 10px 0;
+  padding: 8px 16px;
+  background: #ffdd55;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+}

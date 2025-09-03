@@ -10,22 +10,24 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <header class="header">
-        <h1 class="logo"><a href=""><img src="" class="logo_img"  alt="Jharkhand Tourism"></a></h1>
+
+    <header class="header"> 
         <nav class="navbar">
+            <div class="logo">Jharkhand Tourism</div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Destinations</a></li>
-                <li><a href="#">Trip Planner</a></li>
-                <li><input type="text" placeholder="Search.."></li>
-                <li><a href="#">Marketplace</a></li>
-                <li><a href="#">Culture</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#tripPlanner">Trip Planner</a></li>
+                <li><a href="#marketplace">Marketplace</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="button-85" role="button">Sign-in</button>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <section class="slideshow">
+    <section class="slideshow" id="home">
 
         <div class="slide fade">
             <img src="image1.jpeg" alt="Waterfall">
@@ -50,13 +52,13 @@
         </div>
 
         <div class="slide fade">
-            <img src="img5.jpeg" alt="Culture">
+            <img src="cultural.jpeg" alt="Culture">
             <div class="caption">Celebrate the <span class="highlight">Tribal Culture</span> & Festivals</div>
         </div>
 
     </section>
 
-    <section class="destinations">
+    <section class="destinations" id="destinations">
         <div class="dest-slider" id="destSlider">
             <!-- Slide 1 -->
 
@@ -117,6 +119,93 @@
 
         <button class="dest-btn prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="dest-btn next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <section class="attractions">
+        <!-- Background + Title -->
+        <div class="attractions-header">
+            <h2><span>Attractions</span> of Jharkhand</h2>
+        </div>
+
+        <!-- Slider Wrapper -->
+        <div class="attractions-slider">
+            <button class="attr-btn prev" onclick="moveAttrSlide(-1)">&#10094;</button>
+            <div class="attractions-track" id="attrTrack">
+                <!-- Example Card -->
+                <div class="attr-card">
+                    <img src="Dassam Falls.jpeg" alt="Dassam Fall">
+                    <div class="attr-overlay">
+                        <h3>Dassam Fall</h3>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+                <div class="attr-card">
+                    <img src="patratu.jpeg" alt="Patratu Valley">
+                    <div class="attr-overlay">
+                        <h3>Patratu Valley</h3>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+                <div class="attr-card">
+                    <img src="jagannath.jpeg" alt="Jagannath Temple">
+                    <div class="attr-overlay">
+                        <h3>Jagannath Temple</h3>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+                <div class="attr-card">
+                    <img src="deori.jpeg" alt="Deori Mandir">
+                    <div class="attr-overlay">
+                        <h3>Deori Mandir</h3>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+                <div class="attr-card">
+                    <img src="topchanchi.jpeg" alt="Topchanchi Wildlife Sanctuary ">
+                    <div class="attr-overlay">
+                        <h3>Topchanchi Wildlife Sanctuary </h3>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+                <div class="attr-card">
+                    <img src="jubilee.jpeg" alt="Jubilee Park">
+                    <div class="attr-overlay">
+                        <h3>Jubilee Park</h3>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+                <div class="attr-card">
+                    <img src="bhuvaneshwari.jpeg" alt="Bhuvaneshwari Temple">
+                    <div class="attr-overlay">
+                        <h3>Bhuvaneshwari Temple</h3>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+                <div class="attr-card">
+                    <img src="baidyanath.jpeg" alt="Baba Baidyanath Temple">
+                    <div class="attr-overlay">
+                        <h3>Baba Baidyanath Temple</h3>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+                <div class="attr-card">
+                    <img src="trikut.jpeg" alt="Trikut Hills">
+                    <div class="attr-overlay">
+                        <h3>Trikut Hills</h3>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+                <div class="attr-card">
+                    <img src="bamangora.jpeg" alt="Bamangora Waterfall">
+                    <div class="attr-overlay">
+                        <h3>Bamangora Waterfall</h3>
+                        <a href="#" class="explore-btn">Explore</a>
+                    </div>
+                </div>
+                <!-- Add cards -->
+            </div>
+            <button class="attr-btn next" onclick="moveAttrSlide(1)">&#10095;</button>
+        </div> 
     </section>
 
 </body>
