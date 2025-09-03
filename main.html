@@ -7,6 +7,7 @@
     <title>Main page</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
     <header class="header">
@@ -53,6 +54,69 @@
             <div class="caption">Celebrate the <span class="highlight">Tribal Culture</span> & Festivals</div>
         </div>
 
+    </section>
+
+    <section class="destinations">
+        <div class="dest-slider" id="destSlider">
+            <!-- Slide 1 -->
+
+            <div class="dest-card">
+                <img src="temple.jpeg" alt="Temple">
+                <div class="dest-text">
+                    <h2>DESTINATIONS</h2>
+                    <p>for every tourist</p>
+                </div>
+                <div class="dest-name">Temple & Piligrimage</div>
+                <a href="#" class="discover-btn">Discover More</a>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="dest-card">
+                <img src="hills.jpeg" alt="Hills">
+                <div class="dest-text">
+                    <h2>DESTINATIONS</h2>
+                    <p>for every tourist</p>
+                </div>
+                <div class="dest-name">Hill Stations / Nature</div>
+                <a href="#" class="discover-btn">Discover More</a>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="dest-card">
+                <img src="watterfall.jpeg" alt="Waterfalls">
+                <div class="dest-text">
+                    <h2>DESTINATIONS</h2>
+                    <p>for every tourist</p>
+                </div>
+                <div class="dest-name">Waterfalls</div>
+                <a href="#" class="discover-btn">Discover More</a>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="dest-card">
+                <img src="dams.jpeg" alt="Dams, Lakes & Caves">
+                <div class="dest-text">
+                    <h2>DESTINATIONS</h2>
+                    <p>for every tourist</p>
+                </div>
+                <div class="dest-name">Dams, Lakes & Caves</div>
+                <a href="#" class="discover-btn">Discover More</a>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="dest-card">
+                <img src="culture.jpeg" alt="Historical / Cultural">
+                <div class="dest-text">
+                    <h2>DESTINATIONS</h2>
+                    <p>for every tourist</p>
+                </div>
+                <div class="dest-name">Historical / Cultural</div>
+                <a href="#" class="discover-btn">Discover More</a>
+            </div>
+        </div>
+
+        <button class="dest-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="dest-btn next" onclick="moveSlide(1)">&#10095;</button>
     </section>
 
 </body>
