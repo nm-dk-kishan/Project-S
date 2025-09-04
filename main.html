@@ -25,11 +25,11 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#tripPlanner">Trip Planner</a></li>
-                <li><a href="#marketplace">Marketplace</a></li>
+                <li><a href="#Trip-Planner">Trip-Planner</a></li>
+                <li><a href="#Attractions-Places">Attractions Places</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <button class="button-85" role="button">Sign-in</button>
+                    <button class="button-85" id="signInBtn" role="button">Sign-in</button>
                 </li>
             </ul>
         </nav>
@@ -38,29 +38,29 @@
     <section class="slideshow" id="home">
 
         <div class="slide fade">
-            <img src="image1.jpeg" alt="Waterfall">
+            <img src="images/image1.jpeg" alt="Waterfall">
             <div class="caption">
                 <span class="highlight">Welcome</span> to the <span class="highlight">Beautiful</span> Jharkhand
             </div>
         </div>
 
         <div class="slide fade">
-            <img src="image2.jpeg" alt="Forest">
+            <img src="images/image2.jpeg" alt="Forest">
             <div class="caption">Explore the <span class="highlight">Lush Forests</span> & Wildlife</div>
         </div>
 
         <div class="slide fade">
-            <img src="image3.jpeg" alt="Temple">
+            <img src="images/image3.jpeg" alt="Temple">
             <div class="caption">Experience the <span class="highlight">Spiritual Heritage</span></div>
         </div>
 
         <div class="slide fade">
-            <img src="image4.jpeg" alt="Valley">
+            <img src="images/image4.jpeg" alt="Valley">
             <div class="caption">Discover the <span class="highlight">Scenic Valleys</span> of Jharkhand</div>
         </div>
 
         <div class="slide fade">
-            <img src="cultural.jpeg" alt="Culture">
+            <img src="images/cultural.jpeg" alt="Culture">
             <div class="caption">Celebrate the <span class="highlight">Tribal Culture</span> & Festivals</div>
         </div>
 
@@ -71,7 +71,7 @@
             <!-- Slide 1 -->
 
             <div class="dest-card">
-                <img src="temple.jpeg" alt="Temple">
+                <img src="images/temple.jpeg" alt="Temple">
                 <div class="dest-text">
                     <h2>DESTINATIONS</h2>
                     <p>for every tourist</p>
@@ -82,7 +82,7 @@
 
             <!-- Slide 2 -->
             <div class="dest-card">
-                <img src="hills.jpeg" alt="Hills">
+                <img src="images/hills.jpeg" alt="Hills">
                 <div class="dest-text">
                     <h2>DESTINATIONS</h2>
                     <p>for every tourist</p>
@@ -93,7 +93,7 @@
 
             <!-- Slide 3 -->
             <div class="dest-card">
-                <img src="watterfall.jpeg" alt="Waterfalls">
+                <img src="images/watterfall.jpeg" alt="Waterfalls">
                 <div class="dest-text">
                     <h2>DESTINATIONS</h2>
                     <p>for every tourist</p>
@@ -104,7 +104,7 @@
 
             <!-- Slide 4 -->
             <div class="dest-card">
-                <img src="dams.jpeg" alt="Dams, Lakes & Caves">
+                <img src="images/dams.jpeg" alt="Dams, Lakes & Caves">
                 <div class="dest-text">
                     <h2>DESTINATIONS</h2>
                     <p>for every tourist</p>
@@ -115,7 +115,7 @@
 
             <!-- Slide 5 -->
             <div class="dest-card">
-                <img src="culture.jpeg" alt="Historical / Cultural">
+                <img src="images/culture.jpeg" alt="Historical / Cultural">
                 <div class="dest-text">
                     <h2>DESTINATIONS</h2>
                     <p>for every tourist</p>
@@ -129,7 +129,38 @@
         <button class="dest-btn next" onclick="moveSlide(1)">&#10095;</button>
     </section>
 
-    <section class="attractions">
+    <section>
+        <section class="trip-planner-section" id="Trip-Planner">
+    <div class="trip-container">
+    <h2>🗺️ Plan Your Journey</h2>
+    <p>Customize your travel experience across Jharkhand with our smart AI-powered Trip Planner.</p>
+    
+    <div class="trip-options">
+      <div class="trip-card">
+        <h3>📍 Destination</h3>
+        <p>Choose your dream locations across temples, waterfalls, valleys, and cultural sites.</p>
+      </div>
+      <div class="trip-card">
+        <h3>🛏️ Stay & Food</h3>
+        <p>Get suggestions for hotels, homestays, and local cuisines tailored to your budget.</p>
+      </div>
+      <div class="trip-card">
+        <h3>🚖 Travel Mode</h3>
+        <p>Real-time transport info and route planning with the best travel options.</p>
+      </div>
+      <div class="trip-card">
+        <h3>🎉 Activities</h3>
+        <p>Add sightseeing, adventure, festivals, and cultural events to your trip plan.</p>
+      </div>
+    </div>
+
+    <a href="trip.html" class="trip-btn">✨ Start Planning Now</a>
+  </div>
+</section>
+
+    </section>
+
+    <section class="attractions" id="Attractions-Places">
         <!-- Background + Title -->
         <div class="attractions-header">
             <h2><span>Attractions</span> of Jharkhand</h2>
@@ -140,70 +171,70 @@
             <button class="attr-btn prev" onclick="moveAttrSlide(-1)">&#10094;</button>
             <div class="attractions-track" id="attrTrack">
                 <div class="attr-card">
-                    <img src="Dassam Falls.jpeg" alt="Dassam Fall">
+                    <img src="images/Dassam Falls.jpeg" alt="Dassam Fall">
                     <div class="attr-overlay">
                         <h3>Dassam Fall</h3>
                         <a href="explore.html?id=dassam-fall" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
-                    <img src="patratu.jpeg" alt="Patratu Valley">
+                    <img src="images/patratu.jpeg" alt="Patratu Valley">
                     <div class="attr-overlay">
                         <h3>Patratu Valley</h3>
                         <a href="explore.html?id=patratu-valley" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
-                    <img src="jagannath.jpeg" alt="Jagannath Temple">
+                    <img src="images/jagannath.jpeg" alt="Jagannath Temple">
                     <div class="attr-overlay">
                         <h3>Jagannath Temple</h3>
                         <a href="explore.html?id=jagannath-temple" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
-                    <img src="deori.jpeg" alt="Deori Mandir">
+                    <img src="images/deori.jpeg" alt="Deori Mandir">
                     <div class="attr-overlay">
                         <h3>Deori Mandir</h3>
                         <a href="explore.html?id=deori-mandir" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
-                    <img src="topchanchi.jpeg" alt="Topchanchi Wildlife Sanctuary ">
+                    <img src="images/topchanchi.jpeg" alt="Topchanchi Wildlife Sanctuary ">
                     <div class="attr-overlay">
                         <h3>Topchanchi Wildlife Sanctuary </h3>
                         <a href="explore.html?id=topchanchi-wildlife" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
-                    <img src="jubilee.jpeg" alt="Jubilee Park">
+                    <img src="images/jubilee.jpeg" alt="Jubilee Park">
                     <div class="attr-overlay">
                         <h3>Jubilee Park</h3>
                         <a href="explore.html?id=jubilee-park" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
-                    <img src="bhuvaneshwari.jpeg" alt="Bhuvaneshwari Temple">
+                    <img src="images/bhuvaneshwari.jpeg" alt="Bhuvaneshwari Temple">
                     <div class="attr-overlay">
                         <h3>Bhuvaneshwari Temple</h3>
                         <a href="explore.html?id=bhuvaneshwari-temple" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
-                    <img src="baidyanath.jpeg" alt="Baba Baidyanath Temple">
+                    <img src="images/baidyanath.jpeg" alt="Baba Baidyanath Temple">
                     <div class="attr-overlay">
                         <h3>Baba Baidyanath Temple</h3>
                         <a href="explore.html?id=baidyanath-temple" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
-                    <img src="trikut.jpeg" alt="Trikut Hills">
+                    <img src="images/trikut.jpeg" alt="Trikut Hills">
                     <div class="attr-overlay">
                         <h3>Trikut Hills</h3>
                         <a href="explore.html?id=trikut-hills" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
-                    <img src="bamangora.jpeg" alt="Bamangora Waterfall">
+                    <img src="images/bamangora.jpeg" alt="Bamangora Waterfall">
                     <div class="attr-overlay">
                         <h3>Bamangora Waterfall</h3>
                        <a href="explore.html?id=bamangora-waterfall" class="explore-btn">Explore</a>
@@ -214,6 +245,13 @@
             <button class="attr-btn next" onclick="moveAttrSlide(1)">&#10095;</button>
         </div> 
     </section>
+    <script>
+        document.querySelector('#signInBtn').addEventListener('click', function() {
+            window.location.href = "login.html"; // redirects to login page
+        });
+    </script>
+    <script src="explore.js"></script>
+
 
 </body>
 </html>

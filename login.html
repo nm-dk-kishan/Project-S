@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eco & Cultural Tourism | Login / Signup</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(120deg, #dcedc8, #a5d6a7, #81c784);
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      width: 900px;
+      height: 550px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+      overflow: hidden;
+      display: flex;
+    }
+
+    .form-box {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 50%;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: all 0.8s ease;
+      z-index: 2;
+    }
+
+    .form-box h2 {
+      margin-bottom: 20px;
+      color: #2e7d32;
+    }
+
+    .input-box {
+      margin-bottom: 20px;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .input-box input:focus {
+      border-color: #2e7d32;
+      box-shadow: 0 0 6px rgba(46,125,50,0.3);
+    }
+
+    .btn {
+      padding: 12px;
+      background: #2e7d32;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #1b5e20;
+    }
+
+    .social-login {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .social-login a {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #2e7d32;
+      transition: 0.3s;
+    }
+
+    .social-login a:hover {
+      background: #c8e6c9;
+      transform: scale(1.1);
+    }
+
+    /* Panels */
+    .panel {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(135deg, #66bb6a, #388e3c);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      text-align: center;
+      transition: all 0.8s ease;
+      z-index: 1;
+    }
+
+    .panel h2 {
+      margin-bottom: 10px;
+    }
+
+    .panel p {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .toggle-btn {
+      padding: 10px 20px;
+      background: #fff;
+      border: none;
+      border-radius: 8px;
+      color: #2e7d32;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background: #f1f8e9;
+    }
+
+    /* Positioning */
+    .login-box { left: 0; }
+    .signup-box { right: -50%; opacity: 0; }
+
+    .right-panel { right: 0; }
+    .left-panel { left: -50%; opacity: 0; }
+
+    .container.active .login-box {
+      left: -50%;
+      opacity: 0;
+    }
+
+    .container.active .signup-box {
+      right: 0;
+      opacity: 1;
+    }
+
+    .container.active .left-panel {
+      left: 0;
+      opacity: 1;
+    }
+
+    .container.active .right-panel {
+      right: -50%;
+      opacity: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container" id="container">
+    <!-- Login -->
+    <div class="form-box login-box">
+      <h2>Login</h2>
+      <form>
+        <div class="input-box">
+          <input type="text" placeholder="Username" required>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="social-login">
+          <a href="#"><i class='bx bxl-google'></i></a>
+          <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+          <a href="#"><i class='bx bxl-github'></i></a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Signup -->
+    <div class="form-box signup-box">
+      <h2>Sign Up</h2>
+      <form>
+        <div class="input-box">
+          <input type="text" placeholder="Full Name" required>
+        </div>
+        <div class="input-box">
+          <input type="email" placeholder="Email" required>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn">Sign Up</button>
+        <div class="social-login">
+          <a href="#"><i class='bx bxl-google'></i></a>
+          <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+          <a href="#"><i class='bx bxl-github'></i></a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Panels -->
+    <div class="panel right-panel">
+      <h2>Hello, Traveler!</h2>
+      <p>Join our platform to explore Jharkhand’s eco & cultural destinations.</p>
+      <button class="toggle-btn" id="toSignup">Switch to Sign Up</button>
+    </div>
+
+    <div class="panel left-panel">
+      <h2>Welcome Back!</h2>
+      <p>Log in to continue your journey with Eco & Cultural Tourism.</p>
+      <button class="toggle-btn" id="toLogin">Switch to Login</button>
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById('container');
+    const toSignup = document.getElementById('toSignup');
+    const toLogin = document.getElementById('toLogin');
+
+    toSignup.addEventListener('click', () => {
+      container.classList.add("active");
+    });
+
+    toLogin.addEventListener('click', () => {
+      container.classList.remove("active");
+    });
+  </script>
+</body>
+</html>

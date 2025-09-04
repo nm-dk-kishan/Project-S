@@ -498,6 +498,76 @@ html {
   left: auto;
 }
 
+/* Trip Planner Section */
+.trip-planner-section {
+  background: #fafafa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.trip-planner-section h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.trip-planner-section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.trip-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.trip-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trip-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ff5722;
+}
+
+.trip-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.trip-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.trip-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.trip-btn:hover {
+  background: linear-gradient(135deg, #ff5722, #e64a19);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
 /* Optional: slightly wider cards on very large screens so you still see 4–5 */
 @media (min-width: 1280px) {
   .attr-card { width: 300px; flex-basis: 300px; }

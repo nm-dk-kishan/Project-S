@@ -42,3 +42,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.moveAttrSlide = moveAttrSlide;
 });
+
+
