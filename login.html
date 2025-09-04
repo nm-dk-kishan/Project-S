@@ -189,18 +189,17 @@
     <!-- Login -->
     <div class="form-box login-box">
       <h2>Login</h2>
-      <form>
+      <form id="loginForm">
         <div class="input-box">
-          <input type="text" placeholder="Username" required>
+          <input type="text" placeholder="Username" id="username" required>
         </div>
         <div class="input-box">
-          <input type="password" placeholder="Password" required>
+          <input type="password" placeholder="Password" id="password" required>
         </div>
-        <button type="submit" class="btn">Login</button>
+        <button type="submit" class="btn" id="login">Login</button>
         <div class="social-login">
           <a href="#"><i class='bx bxl-google'></i></a>
           <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-          <a href="#"><i class='bx bxl-github'></i></a>
         </div>
       </form>
     </div>
@@ -222,7 +221,7 @@
         <div class="social-login">
           <a href="#"><i class='bx bxl-google'></i></a>
           <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-          <a href="#"><i class='bx bxl-github'></i></a>
+          <!-- <a href="#"><i class='bx bxl-github'></i></a> -->
         </div>
       </form>
     </div>
@@ -253,6 +252,21 @@
     toLogin.addEventListener('click', () => {
       container.classList.remove("active");
     });
+
+    const loginForm = document.getElementById("loginForm");
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault(); // stop page refresh
+
+      if (username.value.trim() !== "" && password.value.trim() !== "") {
+        window.location.href = "main.html"; 
+      } else {
+        alert("Please enter both username and password!");
+      }
+    });
+
   </script>
 </body>
 </html>
