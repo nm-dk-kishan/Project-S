@@ -6,7 +6,6 @@
   <title>Explore Jharkhand</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="explore.css">
-  <script src="explore.js"></script>  
 </head>
 <body>
 
@@ -16,7 +15,12 @@
         <h1 id="title"></h1>
 
         <p id="short-desc"></p>
-        <p id="full-desc" class="hidden"></p>
+        <div id="full-desc" class="hidden">
+            <p id="long-desc"></p>
+            <h2>Cultural Importance</h2>
+            <p id="culture"></p>
+        </div>
+
         <button class="read-btn" onclick="toggleReadMore(this)">Read More</button>
 
         <div class="info-cards">
@@ -39,16 +43,19 @@
         </div>
     </section>
 
-
     <section class="attractions">
         <h2><span>Attractions</span> Nearby</h2>
-        <div class="attractions-slider" id="nearby"></div>
+        <div class="attractions-slider">
+            <button class="attr-btn prev" onclick="moveAttrSlide(-1)">&#10094;</button>
+            <div class="attractions-track" id="attrTrack"></div>
+            <button class="attr-btn next" onclick="moveAttrSlide(1)">&#10095;</button>
+        </div>
     </section>
 
     <footer class="footer">
         <p>© 2025 Jharkhand Tourism | Designed for Tourists</p>
     </footer>
 
-
+    <script src="explore.js"></script>  
 </body>
 </html>

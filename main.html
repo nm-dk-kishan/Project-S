@@ -7,10 +7,18 @@
     <title>Main page</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <script src="script.js"></script>
 </head>
 <body>
 
+    <df-messenger
+        intent="WELCOME"
+        chat-title="Tourism_Guide"
+        agent-id="e132da4b-ab45-40de-a65d-4b509cbed917"
+        language-code="en">
+    </df-messenger>
+    
     <header class="header"> 
         <nav class="navbar">
             <div class="logo">Jharkhand Tourism</div>
@@ -131,75 +139,74 @@
         <div class="attractions-slider">
             <button class="attr-btn prev" onclick="moveAttrSlide(-1)">&#10094;</button>
             <div class="attractions-track" id="attrTrack">
-                <!-- Example Card -->
                 <div class="attr-card">
                     <img src="Dassam Falls.jpeg" alt="Dassam Fall">
                     <div class="attr-overlay">
                         <h3>Dassam Fall</h3>
-                        <a href="#" class="explore-btn">Explore</a>
+                        <a href="explore.html?id=dassam-fall" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
                     <img src="patratu.jpeg" alt="Patratu Valley">
                     <div class="attr-overlay">
                         <h3>Patratu Valley</h3>
-                        <a href="#" class="explore-btn">Explore</a>
+                        <a href="explore.html?id=patratu-valley" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
                     <img src="jagannath.jpeg" alt="Jagannath Temple">
                     <div class="attr-overlay">
                         <h3>Jagannath Temple</h3>
-                        <a href="#" class="explore-btn">Explore</a>
+                        <a href="explore.html?id=jagannath-temple" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
                     <img src="deori.jpeg" alt="Deori Mandir">
                     <div class="attr-overlay">
                         <h3>Deori Mandir</h3>
-                        <a href="#" class="explore-btn">Explore</a>
+                        <a href="explore.html?id=deori-mandir" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
                     <img src="topchanchi.jpeg" alt="Topchanchi Wildlife Sanctuary ">
                     <div class="attr-overlay">
                         <h3>Topchanchi Wildlife Sanctuary </h3>
-                        <a href="#" class="explore-btn">Explore</a>
+                        <a href="explore.html?id=topchanchi-wildlife" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
                     <img src="jubilee.jpeg" alt="Jubilee Park">
                     <div class="attr-overlay">
                         <h3>Jubilee Park</h3>
-                        <a href="#" class="explore-btn">Explore</a>
+                        <a href="explore.html?id=jubilee-park" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
                     <img src="bhuvaneshwari.jpeg" alt="Bhuvaneshwari Temple">
                     <div class="attr-overlay">
                         <h3>Bhuvaneshwari Temple</h3>
-                        <a href="#" class="explore-btn">Explore</a>
+                        <a href="explore.html?id=bhuvaneshwari-temple" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
                     <img src="baidyanath.jpeg" alt="Baba Baidyanath Temple">
                     <div class="attr-overlay">
                         <h3>Baba Baidyanath Temple</h3>
-                        <a href="#" class="explore-btn">Explore</a>
+                        <a href="explore.html?id=baidyanath-temple" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
                     <img src="trikut.jpeg" alt="Trikut Hills">
                     <div class="attr-overlay">
                         <h3>Trikut Hills</h3>
-                        <a href="#" class="explore-btn">Explore</a>
+                        <a href="explore.html?id=trikut-hills" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <div class="attr-card">
                     <img src="bamangora.jpeg" alt="Bamangora Waterfall">
                     <div class="attr-overlay">
                         <h3>Bamangora Waterfall</h3>
-                        <a href="#" class="explore-btn">Explore</a>
+                       <a href="explore.html?id=bamangora-waterfall" class="explore-btn">Explore</a>
                     </div>
                 </div>
                 <!-- Add cards -->

@@ -81,44 +81,172 @@ body{
 }
 
 .attractions {
-  padding: 60px 40px;
-  background: #fafafa;
-}
-
-.attractions h2 {
-  text-align: center;
-  font-size: 40px;
-  margin-bottom: 40px;
-}
-
-.attractions h2 span {
-  font-weight: bold;
-}
-
-.attractions-slider {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.attr-card {
-  width: 250px;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #000;
+  position: relative;
+  background: url('bg-attractions.jpeg') center/cover no-repeat;
+  padding: 80px 40px;
   color: #fff;
   text-align: center;
 }
 
-.attr-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
+.attractions h2 {
+  font-size: 42px;
+  margin-bottom: 40px;
+  color: #222; 
+  text-shadow: 0 2px 12px rgba(255,255,255,0.7); 
+  letter-spacing: 1px;
 }
 
-.attr-card h3 {
-  margin: 10px;
+.attractions h2 span {
+  font-weight: 900;
+  font-size: 56px;
+  display: block;
+  color: #d97706; 
+  text-shadow: 0 2px 16px rgba(255,255,255,0.8), 0 1px 0 #fff; 
+  letter-spacing: 2px;
+}
+
+/* --- Slider viewport --- */
+.attractions-slider {
+  position: relative;
+  overflow-x: auto;      /* horizontal scroll allow karega */
+  overflow-x: hidden;   
+  overflow-y: visible;  
+  width: 100%;
+  padding-top: 24px;   
+}
+
+/* --- Track (the row that moves) --- */
+.attractions-track {
+  display: flex;
+  gap: 20px;                            
+  will-change: transform;
+  transition: transform .55s cubic-bezier(.22,.8,.24,1);
+}
+
+/* --- Cards --- */
+.attr-card {
+  position: relative;
+  height: 420px;
+  width: 280px;                         
+  flex: 0 0 280px;                      
+  margin: 0;                            
+  background: #000;
+  border-radius: 32px;
+  overflow: hidden;                     
+  box-shadow: 0 8px 32px rgba(0,0,0,.18), 0 1.5px 6px rgba(0,0,0,.10);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform .28s cubic-bezier(.4,2,.6,1), box-shadow .28s;
+  padding-top: 24px;
+  z-index: 0;                        
+}
+
+/* Lift on hover without being cut */
+.attr-card:hover {
+  transform: translateY(-18px);
+  box-shadow: 0 24px 48px -8px rgba(0,0,0,.35), 0 2px 8px rgba(0,0,0,.10);
+  z-index: 10;                          
+}
+
+/* Image fills the card */
+.attr-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Overlay content */
+.attr-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-bottom: 38px;
+  padding-top: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.attr-overlay::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,.35) 70%, transparent 100%);
+  z-index: -1;
+}
+
+.attr-overlay h3 {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,.5);
+  letter-spacing: .5px;
+}
+
+/* Button */
+.explore-btn {
+  display: inline-block;
+  padding: 10px 36px;
+  background: #ffdd55;
+  color: #000;
+  border-radius: 22px;
+  font-weight: 700;
+  font-size: 1.08rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,.10);
+  border: none;
+  transition: background .2s, transform .2s;
+}
+
+.explore-btn:hover { background: #ffc107; transform: scale(1.07); }
+
+/* Nav arrows */
+.attr-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.85);
+  color: #222;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 1.7rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.attr-btn:hover {
+  background: #ffdd55;
+  color: #000;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+.attr-btn.prev {
+  left: 20px;
+  right: auto;
+}
+
+.attr-btn.next {
+  right: 20px;
+  left: auto;
+}
+
+/* Optional: slightly wider cards on very large screens so you still see 4–5 */
+@media (min-width: 1280px) {
+  .attr-card { width: 300px; flex-basis: 300px; }
 }
 
 .footer {

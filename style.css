@@ -116,30 +116,47 @@ html {
 .slideshow {
   position: relative;
   width: 100%;
-  height: 88vh;
+  height: 96vh;
   overflow: hidden;
   color: #000;
 }
 
-.slide {
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  object-position: center; 
+}
+
+.slideshow .slide {
   position: absolute;
   width: 100%;
   height: 100%;
   opacity: 0;
   animation: fade 25s infinite;
+  overflow: hidden;
 }
 
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.slideshow .slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.32) 0%,
+    rgba(0,0,0,0.45) 60%,
+    rgba(0,0,0,0.32) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
 }
 
-.caption {
-  animation: captionFade 2s ease forwards;
+/* Make sure caption is above overlay */
+.slideshow .slide .caption {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 3;
   transform: translate(-50%, -50%);
   color: #fff;
   font-size: 40px;
@@ -190,7 +207,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 150px; /* 👈 height adjust kar sakti ho */
+  height: 240px; /* 👈 height adjust kar sakti ho */
   background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
   z-index: 5;
   pointer-events: none;
